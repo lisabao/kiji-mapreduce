@@ -46,8 +46,8 @@ import org.kiji.annotations.ApiAudience;
  */
 @ApiAudience.Public
 public final class MapFileMapReduceJobOutput extends FileMapReduceJobOutput {
-  /** Default constructor. Do not use directly. */
-  public MapFileMapReduceJobOutput() {
+  /** Default constructor. Accessible via {@link MapReduceFileOutputs}. */
+  MapFileMapReduceJobOutput() {
   }
 
   /**
@@ -56,7 +56,7 @@ public final class MapFileMapReduceJobOutput extends FileMapReduceJobOutput {
    * @param filePath Path to output folder.
    * @param numSplits Number of output file splits.
    */
-  public MapFileMapReduceJobOutput(Path filePath, int numSplits) {
+  MapFileMapReduceJobOutput(Path filePath, int numSplits) {
     super(filePath, numSplits);
   }
 

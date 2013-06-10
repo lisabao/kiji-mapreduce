@@ -46,8 +46,8 @@ import org.kiji.avro.mapreduce.AvroSequenceFileOutputFormat;
  */
 @ApiAudience.Public
 public final class SequenceFileMapReduceJobOutput extends FileMapReduceJobOutput {
-  /** Default constructor. Do not use directly. */
-  public SequenceFileMapReduceJobOutput() {
+  /** Default constructor. Accessible via {@link MapReduceFileOutputs}. */
+  SequenceFileMapReduceJobOutput() {
   }
 
   /**
@@ -56,7 +56,7 @@ public final class SequenceFileMapReduceJobOutput extends FileMapReduceJobOutput
    * @param filePath The file system path for the output files.
    * @param numSplits The number of output file splits.
    */
-  public SequenceFileMapReduceJobOutput(Path filePath, int numSplits) {
+  SequenceFileMapReduceJobOutput(Path filePath, int numSplits) {
     super(filePath, numSplits);
   }
 

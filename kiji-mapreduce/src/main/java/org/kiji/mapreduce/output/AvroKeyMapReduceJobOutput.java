@@ -52,17 +52,16 @@ import org.kiji.avro.mapreduce.AvroKeyOutputFormat;
  */
 @ApiAudience.Public
 public final class AvroKeyMapReduceJobOutput extends FileMapReduceJobOutput {
-  /** Default constructor. Do not use directly. */
-  public AvroKeyMapReduceJobOutput() {
+  /** Default constructor. Accessible via {@link MapReduceJobInputs}. */
+  AvroKeyMapReduceJobOutput() {
   }
 
   /**
    * Creates a new <code>AvroKeyMapReduceJobOutput</code> instance.
-   *
    * @param filePath Path to output folder.
    * @param numSplits Number of output file splits.
    */
-  public AvroKeyMapReduceJobOutput(Path filePath, int numSplits) {
+  AvroKeyMapReduceJobOutput(Path filePath, int numSplits) {
     super(filePath, numSplits);
   }
 
