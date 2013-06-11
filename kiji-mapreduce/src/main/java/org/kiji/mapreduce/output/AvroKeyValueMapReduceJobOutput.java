@@ -52,7 +52,7 @@ import org.kiji.avro.mapreduce.AvroKeyValueOutputFormat;
  */
 @ApiAudience.Public
 public final class AvroKeyValueMapReduceJobOutput extends FileMapReduceJobOutput {
-  /** Default constructor. Accessible via {@link MapReduceFileOutputs}. */
+  /** Default constructor. Accessible via {@link MapReduceJobOutputs}. */
   AvroKeyValueMapReduceJobOutput() {
   }
 

@@ -46,7 +46,7 @@ import org.kiji.avro.mapreduce.AvroSequenceFileOutputFormat;
  */
 @ApiAudience.Public
 public final class SequenceFileMapReduceJobOutput extends FileMapReduceJobOutput {
-  /** Default constructor. Accessible via {@link MapReduceFileOutputs}. */
+  /** Default constructor. Accessible via {@link MapReduceJobOutputs}. */
   SequenceFileMapReduceJobOutput() {
   }
 

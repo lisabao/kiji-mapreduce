@@ -42,8 +42,8 @@ public abstract class KijiTableMapReduceJobOutput extends MapReduceJobOutput {
   /** Number of reduce tasks to use. */
   private int mNumReduceTasks;
 
-  /** Default constructor. Accessible in {@link MapReduceFileOutputs}. */
-  KijiTableMapReduceJobOutput() {
+  /** Default constructor. Do not use directly. */
+  protected KijiTableMapReduceJobOutput() {
   }
 
   /** {@inheritDoc} */
@@ -59,7 +59,7 @@ public abstract class KijiTableMapReduceJobOutput extends MapReduceJobOutput {
    * @param tableURI The kiji table to write output to.
    * @param numReduceTasks The number of reduce tasks to use (use zero if using a producer).
    */
-  KijiTableMapReduceJobOutput(KijiURI tableURI, int numReduceTasks) {
+  public KijiTableMapReduceJobOutput(KijiURI tableURI, int numReduceTasks) {
     mTableURI = tableURI;
     mNumReduceTasks = numReduceTasks;
   }

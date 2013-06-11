@@ -46,7 +46,7 @@ import org.kiji.annotations.ApiAudience;
  */
 @ApiAudience.Public
 public final class MapFileMapReduceJobOutput extends FileMapReduceJobOutput {
-  /** Default constructor. Accessible via {@link MapReduceFileOutputs}. */
+  /** Default constructor. Accessible via {@link MapReduceJobOutputs}. */
   MapFileMapReduceJobOutput() {
   }
 
