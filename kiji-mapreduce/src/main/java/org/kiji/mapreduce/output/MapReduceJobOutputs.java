@@ -21,7 +21,6 @@ package org.kiji.mapreduce.output;
 
 import org.apache.hadoop.fs.Path;
 
-import org.kiji.schema.KijiDataRequest;
 import org.kiji.schema.KijiURI;
 
 /**
@@ -44,7 +43,7 @@ public final class MapReduceJobOutputs {
    * Createss a new HFileMapReduceJobOutput.
    * @param tableURI The kiji table the resulting HFiles are intended for.
    * @param path The directory path to output the HFiles to.
-   * @return a new HFileMapReduceJobOutput initialized with the intended kiji table and 
+   * @return a new HFileMapReduceJobOutput initialized with the intended kiji table and
    * output directory path.
    */
   public static HFileMapReduceJobOutput newHFileMapReduceJobOutput(KijiURI tableURI, Path path) {
@@ -56,7 +55,7 @@ public final class MapReduceJobOutputs {
    * @param tableURI The kiji table the resulting HFiles are intended for.
    * @param path The directory path to output the HFiles to.
    * @param numSplits Number of splits (determines the number of reduce tasks).
-   * @return a new HFileMapReduceJobOutput initialized with the intended kiji table, output 
+   * @return a new HFileMapReduceJobOutput initialized with the intended kiji table, output
    * directory path, and number of splits (hashRowKeys-enabled Kiji table only).
    */
   public static HFileMapReduceJobOutput newHFileMapReduceJobOutput(
@@ -76,7 +75,7 @@ public final class MapReduceJobOutputs {
    * Creates a new TextMapReduceJobOutput.
    * @param filePath Path to output folder.
    * @param numSplits Number of output file splits.
-   * @return a new TextMapReduceJobOutput initialized with the output folder path and number of 
+   * @return a new TextMapReduceJobOutput initialized with the output folder path and number of
    * file splits.
    */
   public static TextMapReduceJobOutput newTextMapReduceJobOutput(Path filePath, int numSplits) {
@@ -100,9 +99,9 @@ public final class MapReduceJobOutputs {
       KijiURI tableURI) {
     return new DirectKijiTableMapReduceJobOutput(tableURI);
   }
-  
+
   /**
-   * Creates a new DirectKijiTableMapReduceJobOutput with the Kiji table and number of 
+   * Creates a new DirectKijiTableMapReduceJobOutput with the Kiji table and number of
    * reduce tasks to use.
    * @param tableURI The Kiji table to write to.
    * @param numReduceTasks The number of reduce tasks to use (use zero if using a producer).
@@ -126,7 +125,7 @@ public final class MapReduceJobOutputs {
    * Creates a new SequenceFileMapReduceJobOutput.
    * @param filePath The file system path for the output files.
    * @param numSplits The number of output file splits.
-   * @return a new SequenceFileMapReduceJobOutput initialized with the output file system path and 
+   * @return a new SequenceFileMapReduceJobOutput initialized with the output file system path and
    * number of file splits.
    */
   public static SequenceFileMapReduceJobOutput newSequenceFileMapReduceJobOutput(
@@ -146,7 +145,7 @@ public final class MapReduceJobOutputs {
    * Creates a new AvroKeyMapReduceJobOutput.
    * @param filePath Path to output folder.
    * @param numSplits Number of output file splits.
-   * @return a new AvroKeyMapReduceJobOutput initialized with the output folder path and 
+   * @return a new AvroKeyMapReduceJobOutput initialized with the output folder path and
    * number of file splits.
    */
   public static AvroKeyMapReduceJobOutput newAvroKeyMapReduceJobOutput(
@@ -166,7 +165,7 @@ public final class MapReduceJobOutputs {
    * Creates a new AvroKeyValueMapReduceJobOutput.
    * @param filePath The file system path for the output files.
    * @param numSplits The number of output file splits.
-   * @return a new AvroKeyValueMapReduceJobOutput initialized with the output folder path and 
+   * @return a new AvroKeyValueMapReduceJobOutput initialized with the output folder path and
    * number of file splits.
    */
   public static AvroKeyValueMapReduceJobOutput newAvroKeyValueMapReduceJobOutput(
@@ -186,7 +185,7 @@ public final class MapReduceJobOutputs {
    * Creates a new MapFileMapReduceJobOutput.
    * @param filePath Path to output folder.
    * @param numSplits Number of output file splits.
-   * @return a new MapFileMapReduceJobOutput initialized with the output folder path and 
+   * @return a new MapFileMapReduceJobOutput initialized with the output folder path and
    * number of file splits.
    */
   public static MapFileMapReduceJobOutput newMapFileMapReduceJobOutput(
