@@ -52,6 +52,19 @@ public final class MapReduceJobOutputs {
   }
 
   /**
+   * Createss a new HFileMapReduceJobOutput.
+   * @param table The kiji table the resulting HFiles are intended for.
+   * @param path The directory path to output the HFiles to.
+   * @param numSplits Number of splits (determines the number of reduce tasks).
+   * @return a new HFileMapReduceJobOutput initialized with the intended kiji table, output 
+   * directory path, and number of splits (hashRowKeys-enabled Kiji table only).
+   */
+  public static HFileMapReduceJobOutput newHFileMapReduceJobOutput(
+      KijiURI tableURI, Path path, int numSplits) {
+    return new HFileMapReduceJobOutput(tableURI, path, numSplits);
+  }
+
+  /**
    * Createss a new uninitialized TextMapReduceJobOutput.
    * @return a new uninitialized TextMapReduceJobOutput.
    */
