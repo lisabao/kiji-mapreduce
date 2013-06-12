@@ -53,7 +53,7 @@ public final class MapReduceJobOutputs {
 
   /**
    * Createss a new HFileMapReduceJobOutput.
-   * @param table The kiji table the resulting HFiles are intended for.
+   * @param tableURI The kiji table the resulting HFiles are intended for.
    * @param path The directory path to output the HFiles to.
    * @param numSplits Number of splits (determines the number of reduce tasks).
    * @return a new HFileMapReduceJobOutput initialized with the intended kiji table, output 
